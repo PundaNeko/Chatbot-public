@@ -25,7 +25,7 @@ namespace Simple_Chatbot_Remake
 
         private string LLMModel = "openrouter/pony-alpha";
 
-        string apiKey = "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";
+        string apiKey = "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";
         private List<object> conversationHistory = new();
         private readonly HttpClient client = new();
         private List<ChatRule> chatRules = new List<ChatRule>();
