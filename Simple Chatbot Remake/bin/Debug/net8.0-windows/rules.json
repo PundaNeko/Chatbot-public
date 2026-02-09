@@ -1,0 +1,84 @@
+{
+  "rules": [
+    {
+      "language": "english",
+      "rules": [
+        {
+          "pattern": "hi|hello|hey",
+          "responses": [
+            "Hello! How can I help you today?",
+            "Hi there! What's up?",
+            "Hey! Nice to see you!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "how are you",
+          "responses": [
+            "I'm doing great as a simple bot!",
+            "Feeling fantastic, thanks!",
+            "Pretty good! How about you?"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "what is your name|who are you",
+          "responses": [
+            "I'm your JSON-powered chatbot!",
+            "Call me RuleBot!",
+            "Just a simple rule-based bot."
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "bye|goodbye|exit",
+          "responses": [
+            "Goodbye! See you later!",
+            "Bye! Have a great day!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        }
+      ]
+    },
+    {
+      "language": "japanese",
+      "rules": [
+        {
+          "pattern": "こんにちは|やあ|おはよう",
+          "responses": [
+            "こんにちは！お手伝いできることはありますか？",
+            "やあ！元気？",
+            "こんにちは！お元気ですか？"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "元気|お元気|調子はどう",
+          "responses": [
+            "元気です！シンプルなボットですが頑張ります！",
+            "絶好調です、ありがとう！",
+            "調子いいですよ！あなたは？"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "名前|あなたは誰|自己紹介",
+          "responses": [
+            "JSONで動くチャットボットです！",
+            "ルールボットと呼んでください！",
+            "ルールベースのボットです。"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "またね|さようなら|バイバイ",
+          "responses": [
+            "またね！",
+            "さようなら！良い一日を！"
+          ],
+          "options": "Compiled"
+        }
+      ]
+    }
+  ]
+}

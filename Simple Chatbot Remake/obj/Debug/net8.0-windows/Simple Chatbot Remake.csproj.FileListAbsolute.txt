@@ -1,0 +1,20 @@
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\bin\Debug\net8.0-windows\Simple Chatbot Remake.exe
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\bin\Debug\net8.0-windows\Simple Chatbot Remake.deps.json
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\bin\Debug\net8.0-windows\Simple Chatbot Remake.runtimeconfig.json
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\bin\Debug\net8.0-windows\Simple Chatbot Remake.dll
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\bin\Debug\net8.0-windows\Simple Chatbot Remake.pdb
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple_Chatbot_Remake.Form1.resources
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.csproj.GenerateResource.cache
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.AssemblyInfoInputs.cache
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.AssemblyInfo.cs
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.csproj.CoreCompileInputs.cache
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.dll
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\refint\Simple Chatbot Remake.dll
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.pdb
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.genruntimeconfig.cache
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\ref\Simple Chatbot Remake.dll
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\bin\Debug\net8.0-windows\System.Speech.dll
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Speech.dll
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.csproj.AssemblyReference.cache
+C:\Users\Punda Neko\source\repos\Simple Chatbot Remake\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple C.FE79B395.Up2Date
