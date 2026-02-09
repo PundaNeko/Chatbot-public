@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://localhost:4000/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <input id="usernameInput" placeholder="Enter your name" style="width:300px">
+    <button id="joinBtn" onclick="joinChat()">Join Chat</button>
+    <div id="chatContainer" style="display:none;">
+    <div id="messages" style="height:200px;overflow-y:scroll;border:1px solid #ccc;padding:10px"></div>
+    <input id="input" placeholder="Type message..." style="width:300px">
+    <button onclick="sendMessage()">Send</button>
+
+<script>
+    
+const socket = io('http://localhost:4000');
+socket.emit('join-session', {sessionId: 'room1', userId: 1});
+
+socket.on('load-messages', (msgs) => {
+  const messagesDiv = document.getElementById('messages');
+  messagesDiv.innerHTML = msgs.map(m => `<p><strong>${m.username}:</strong> ${m.content}</p>`).join('');
+});
+
+socket.on('new-message', (msg) => {
+console.log(msg.username);
+  document.getElementById('messages').innerHTML += `<p><strong>${msg.username || 'Someone'}:</strong> ${msg.content}</p>`;
+  document.getElementById('messages').scrollTop = document.getElementById('messages').scrollHeight;
+});
+
+let currentUserId;
+
+function joinChat() {
+  const username = document.getElementById('usernameInput').value.trim();
+  if (!username) return alert('Enter a name');
+  
+  fetch('http://localhost:4000/enter-name', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username })
+  })
+  .then(res => res.json())
+  .then(({ userId, username }) => {
+    currentUserId = userId;
+    document.getElementById('usernameInput').style.display = 'none';
+    document.getElementById('joinBtn').style.display = 'none';
+    document.getElementById('chatContainer').style.display = 'block';
+    
+    // Now join with real userId
+    socket.emit('join-session', { sessionId: 'room1', userId });
+  });
+}
+
+function sendMessage() {
+  const text = document.getElementById('input').value;
+  if (text.trim()) {
+    socket.emit('send-message', {sessionId: 'room1', content: text});
+    document.getElementById('input').value = '';
+  }
+}
+</script>
+</body>
+</html>

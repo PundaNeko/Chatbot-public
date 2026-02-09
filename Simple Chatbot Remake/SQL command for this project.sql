@@ -1,4 +1,5 @@
 CREATE DATABASE chatdb;
+
 USE chatdb;
 
 CREATE TABLE users (
@@ -13,7 +14,5 @@ CREATE TABLE messages (
   sender_id INT NOT NULL,
   content TEXT NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  INDEX idx_session (session_id),
-  INDEX idx_sender (sender_id),
-  FOREIGN KEY (sender_id) REFERENCES users(id)
+  INDEX idx_session (session_id)
 );
