@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Simple Chatbot Remake")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7428f896133af04fb4f6d132bc962e95e5d3711d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Simple Chatbot Remake")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Simple Chatbot Remake")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

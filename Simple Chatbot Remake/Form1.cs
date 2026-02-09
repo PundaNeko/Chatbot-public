@@ -1,25 +1,33 @@
+using Microsoft.Data.SqlClient;
+using Microsoft.VisualBasic.ApplicationServices;
+using NAudio.CoreAudioApi;
+using NAudio.Wave;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.ComponentModel.Design.Serialization;
 using System.IO;
-using System.Text.Json;
-using System.Text.RegularExpressions;
-using System.Windows.Forms;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
-using NAudio.Wave;
-
+using System.Text;
+using System.Text.Json;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using static Simple_Chatbot_Remake.Form1;
 
 namespace Simple_Chatbot_Remake
 {
     public partial class Form1 : Form
     {
-        private SpeechRecognitionEngine _recognizer;
-        private SpeechSynthesizer _speaker = new SpeechSynthesizer();
+        private string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=ChatBotDB;Trusted_Connection=True;";
 
+        private string LLMModel = "openrouter/pony-alpha";
+
+        string apiKey = "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";
+        private List<object> conversationHistory = new();
+        private readonly HttpClient client = new();
         private List<ChatRule> chatRules = new List<ChatRule>();
         private Random rand = new Random();
 
@@ -47,7 +55,6 @@ namespace Simple_Chatbot_Remake
         {
             InitializeComponent();
             InitializeRules();
-            SetupVoice();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,7 +64,7 @@ namespace Simple_Chatbot_Remake
         }
         private void InitializeRules()
         {
-            DebugText.AppendText("Execution started\n");
+            //DebugText.AppendText("Execution started\n");
             //try to open json file
             try
             {
@@ -65,9 +72,9 @@ namespace Simple_Chatbot_Remake
                 string json = File.ReadAllText(jsonPath);
                 var data = JsonSerializer.Deserialize<Root>(json);
 
-                DebugText.AppendText("data is null? " + (data == null) + "\n");
-                DebugText.AppendText("data.rules is null? " + (data?.rules == null) + "\n");
-                DebugText.AppendText("language count: " + (data?.rules?.Count ?? 0) + "\n");
+                //DebugText.AppendText("data is null? " + (data == null) + "\n");
+                //DebugText.AppendText("data.rules is null? " + (data?.rules == null) + "\n");
+                //DebugText.AppendText("language count: " + (data?.rules?.Count ?? 0) + "\n");
 
                 if (data?.rules == null || data.rules.Count == 0)
                 {
@@ -75,11 +82,11 @@ namespace Simple_Chatbot_Remake
                     return;
                 }
 
-                DebugText.AppendText("=== RAW JSON LOADED ===" + "\n");
+                //DebugText.AppendText("=== RAW JSON LOADED ===" + "\n");
 
                 foreach (var langGroup in data.rules)
                 {
-                    DebugText.AppendText($"--- {langGroup.language} rules ---\n");
+                    //DebugText.AppendText($"--- {langGroup.language} rules ---\n");
 
                     foreach (var rule in langGroup.rules ?? new List<ChatRule>())
                     {
@@ -121,55 +128,70 @@ namespace Simple_Chatbot_Remake
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             string userInput = textBox1.Text.Trim();
             if (string.IsNullOrEmpty(userInput)) return;
 
+            AddMessage($"You:\n {userInput}\n", Color.Blue);
+            textBox1.Clear();
+
+            conversationHistory.Add(new { role = "user", content = userInput });
+
+            InsertIntoSQL("NekoPunda", "user", userInput);
+
+            client.DefaultRequestHeaders.Authorization = new("Bearer", apiKey);
+
+            var request = new
+            {
+                model = LLMModel,
+                messages = conversationHistory.ToArray(),
+                max_tokens = 1000
+            };
+
+            try
+            {
+                var json = JsonSerializer.Serialize(request);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await
+                    client.PostAsync("https://openrouter.ai/api/v1/chat/completions", content);
+                response.EnsureSuccessStatusCode();
+                if (!response.IsSuccessStatusCode)
+                {
+                    string errorBody = await response.Content.ReadAsStringAsync();
+                    //DebugText.AppendText($"API Error: {response.StatusCode} - {errorBody} \n");
+                    return;
+                }
+
+                var resultJson = await response.Content.ReadAsStringAsync();
+                File.WriteAllText($"response_{DateTime.Now:yyyyMMdd_HHmmss}.json", resultJson);
+                var result = JsonSerializer.Deserialize<JsonElement>(resultJson);
+                var botChoices = result.GetProperty("choices")[0].GetProperty("message");
+                string botReply = botChoices.GetProperty("content").GetString();
+                string botRole = botChoices.GetProperty("role").GetString();
+                int tokenCount = result.GetProperty("usage").GetProperty("completion_tokens").GetInt32();
+
+                await InsertIntoSQL("ChattyBotty", botRole, botReply, LLMModel, tokenCount);
+
+                AddMessage($"Bot:\n {botReply}\n", Color.White);
+                conversationHistory.Add(new { role = botRole, content = botReply });
+            }
+            catch (Exception ex)
+            {
+                //DebugText.AppendText("Error: " + ex.Message);
+            }
+        }
+
+        private void AddMessage(string message, Color backColor)
+        {
             // Add user message
             richTextBox1.SelectionStart = richTextBox1.TextLength;
             richTextBox1.SelectionLength = 0;
             richTextBox1.SelectionColor = System.Drawing.Color.Blue;
-            richTextBox1.AppendText($"You:\n {userInput}\n");
+            richTextBox1.AppendText(message + "\r\n");
             richTextBox1.SelectionColor = richTextBox1.ForeColor;
             textBox1.Clear();
-
-            // Scroll to bottom
-            richTextBox1.SelectionStart = richTextBox1.Text.Length;
-            richTextBox1.ScrollToCaret();
-
-            // Bot response
-            string response = GetResponse(userInput);
-            richTextBox1.AppendText($"Bot:\n {response}\n");
-            richTextBox1.ScrollToCaret();
         }
-
-        #region Voice Recognition and Synthesis
-        private void SetupVoice()
-        {
-            try
-            {
-                _recognizer = new SpeechRecognitionEngine();
-
-                _recognizer.SetInputToDefaultAudioDevice();
-                _recognizer.LoadGrammar(new DictationGrammar());
-                _recognizer.SpeechRecognized += Recognizer_SpeechRecognized;
-                _recognizer.RecognizeAsync(RecognizeMode.Multiple);
-            }
-            catch (Exception ex)
-            {
-                DebugText.AppendText($"Voice setup failed: {ex.Message}\n");
-            }
-        }
-
-        private void Recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
-        {
-            string answer = e.Result.Text.ToLower();
-            DebugText.AppendText($"Heard: '{answer}'\n");
-
-            string response = GetResponse(answer);
-        }
-        #endregion
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -182,11 +204,7 @@ namespace Simple_Chatbot_Remake
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Start recording on hold, stop recording on release
-            if (_recognizer != null)
-            {
-                _speaker.SpeakAsync("Listening for you");
-            }
+            
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -212,9 +230,27 @@ namespace Simple_Chatbot_Remake
             }
         }
 
+        private async Task InsertIntoSQL(string userId, string role, string content, string modelUsed = "Human", int tokensUsed = 0)
+        {
+            DateTime thisTime = DateTime.Now;
+            using var conn = new SqlConnection(connectionString);
+            await conn.OpenAsync();
+
+            string sql = @"INSERT INTO ChatHistory (UserID, Role, Content, ModelUsed, TokensUsed) 
+               VALUES (@userId, @role, @content, @modelUsed, @tokensUsed)";
+
+
+            using var cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@userId", userId);
+            cmd.Parameters.AddWithValue("@role", role);
+            cmd.Parameters.AddWithValue("@content", content);
+            cmd.Parameters.AddWithValue("@modelUsed", modelUsed);
+            cmd.Parameters.AddWithValue("@tokensUsed", tokensUsed);
+            await cmd.ExecuteNonQueryAsync();
+
+        }
+
         //TRY 0: add in a profile json add a snarky ass comment from the bot 
-        //TRY 1: next, connect to a web based application (probably should make myself) sql server?
-        //TRY 2: branch it and add in a free AI API (not sure if this will work)
         //TRY 3: add in a 2 way comminucation methods
         //TRY 4: try to make every word have a vector value for personal use (probably seperate branch
 

@@ -1,0 +1,50 @@
+{
+  "id": "chatcmpl-604bf876acce1f6ead6acd11",
+  "provider": "Stealth",
+  "model": "openrouter/pony-alpha",
+  "object": "chat.completion",
+  "created": 1770457332,
+  "choices": [
+    {
+      "logprobs": null,
+      "finish_reason": "stop",
+      "native_finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "你好！我是GLM，Z.ai训练的大语言模型。很高兴能与你交流。\n\n我可以回答问题、提供信息或 simply 聊聊天。无论你需要什么帮助，我都在这里为你服务。\n\n请问今天我能为你做些什么？",
+        "refusal": null,
+        "reasoning": "Let me consider how to respond to this greeting.\n\nThe user has started with a simple \"Hello\" - this is likely the beginning of a conversation. I should respond in a way that's both welcoming and open-ended.\n\nFirst, I'll acknowledge their greeting warmly. Then I should introduce myself briefly to establish context. Since this is an initial interaction, I should also invite them to share what's on their mind or what they might need help with.\n\nI need to keep my response friendly and approachable, while maintaining professionalism. It would be good to keep it concise too - no need to overwhelm them with information right away.\n\nThe key is to create an inviting atmosphere for conversation while leaving the door open for them to direct the discussion. I'll make sure to end with an open question that encourages them to share their thoughts or needs.\n\nLet me craft a response that's welcoming, informative, and encourages further dialogue.",
+        "reasoning_details": [
+          {
+            "format": "unknown",
+            "index": 0,
+            "type": "reasoning.text",
+            "text": "Let me consider how to respond to this greeting.\n\nThe user has started with a simple \"Hello\" - this is likely the beginning of a conversation. I should respond in a way that's both welcoming and open-ended.\n\nFirst, I'll acknowledge their greeting warmly. Then I should introduce myself briefly to establish context. Since this is an initial interaction, I should also invite them to share what's on their mind or what they might need help with.\n\nI need to keep my response friendly and approachable, while maintaining professionalism. It would be good to keep it concise too - no need to overwhelm them with information right away.\n\nThe key is to create an inviting atmosphere for conversation while leaving the door open for them to direct the discussion. I'll make sure to end with an open question that encourages them to share their thoughts or needs.\n\nLet me craft a response that's welcoming, informative, and encourages further dialogue."
+          }
+        ]
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 6,
+    "completion_tokens": 234,
+    "total_tokens": 240,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": null,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 244,
+      "image_tokens": 0
+    }
+  }
+}

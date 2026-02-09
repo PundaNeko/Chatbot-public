@@ -31,10 +31,6 @@
             richTextBox1 = new RichTextBox();
             textBox1 = new TextBox();
             button1 = new Button();
-            RecordButton = new Button();
-            BotReplayButton = new Button();
-            InputReplayButton = new Button();
-            DebugText = new RichTextBox();
             SuspendLayout();
             // 
             // richTextBox1
@@ -51,68 +47,27 @@
             textBox1.Location = new Point(12, 552);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(963, 49);
+            textBox1.Size = new Size(896, 49);
             textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
             textBox1.KeyDown += textBox1_KeyDown;
             // 
             // button1
             // 
-            button1.Location = new Point(981, 552);
+            button1.Location = new Point(914, 552);
             button1.Name = "button1";
-            button1.Size = new Size(127, 49);
+            button1.Size = new Size(61, 49);
             button1.TabIndex = 2;
             button1.Text = "Send Input";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             button1.KeyDown += button1_KeyDown;
             // 
-            // RecordButton
-            // 
-            RecordButton.Location = new Point(1114, 552);
-            RecordButton.Name = "RecordButton";
-            RecordButton.Size = new Size(52, 49);
-            RecordButton.TabIndex = 3;
-            RecordButton.Text = "Record Voice";
-            RecordButton.UseVisualStyleBackColor = true;
-            RecordButton.Click += button2_Click;
-            // 
-            // BotReplayButton
-            // 
-            BotReplayButton.Location = new Point(981, 469);
-            BotReplayButton.Name = "BotReplayButton";
-            BotReplayButton.Size = new Size(75, 77);
-            BotReplayButton.TabIndex = 4;
-            BotReplayButton.Text = "Tell the bot to speak";
-            BotReplayButton.UseVisualStyleBackColor = true;
-            BotReplayButton.Click += button2_Click_1;
-            // 
-            // InputReplayButton
-            // 
-            InputReplayButton.Location = new Point(981, 386);
-            InputReplayButton.Name = "InputReplayButton";
-            InputReplayButton.Size = new Size(75, 77);
-            InputReplayButton.TabIndex = 5;
-            InputReplayButton.Text = "Listen to yourself";
-            InputReplayButton.UseVisualStyleBackColor = true;
-            // 
-            // DebugText
-            // 
-            DebugText.Location = new Point(981, 12);
-            DebugText.Name = "DebugText";
-            DebugText.Size = new Size(710, 368);
-            DebugText.TabIndex = 6;
-            DebugText.Text = "";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1703, 624);
-            Controls.Add(DebugText);
-            Controls.Add(InputReplayButton);
-            Controls.Add(BotReplayButton);
-            Controls.Add(RecordButton);
+            ClientSize = new Size(1009, 624);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(richTextBox1);
@@ -128,9 +83,5 @@
         private RichTextBox richTextBox1;
         private TextBox textBox1;
         private Button button1;
-        private Button RecordButton;
-        private Button BotReplayButton;
-        private Button InputReplayButton;
-        private RichTextBox DebugText;
     }
 }
