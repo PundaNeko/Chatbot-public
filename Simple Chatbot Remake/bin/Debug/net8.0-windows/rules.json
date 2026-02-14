@@ -4,37 +4,67 @@
       "language": "english",
       "rules": [
         {
-          "pattern": "hi|hello|hey",
+          "pattern": "hi|hello|hey|good morning|good afternoon",
           "responses": [
             "Hello! How can I help you today?",
             "Hi there! What's up?",
-            "Hey! Nice to see you!"
+            "Hey! Nice to see you!",
+            "Good day! What brings you here?",
+            "Greetings! Ready to chat?"
           ],
           "options": "IgnoreCase,Compiled"
         },
         {
-          "pattern": "how are you",
+          "pattern": "how are you|how's it going|how you doing",
           "responses": [
             "I'm doing great as a simple bot!",
             "Feeling fantastic, thanks!",
-            "Pretty good! How about you?"
+            "Pretty good! How about you?",
+            "All systems nominal! Yourself?",
+            "Running smoothly! What's new?"
           ],
           "options": "IgnoreCase,Compiled"
         },
         {
-          "pattern": "what is your name|who are you",
+          "pattern": "what is your name|who are you|what's your name",
           "responses": [
             "I'm your JSON-powered chatbot!",
             "Call me RuleBot!",
-            "Just a simple rule-based bot."
+            "Just a simple rule-based bot.",
+            "JSON RuleBot at your service!",
+            "Your friendly neighborhood RuleBot!"
           ],
           "options": "IgnoreCase,Compiled"
         },
         {
-          "pattern": "bye|goodbye|exit",
+          "pattern": "bye|goodbye|exit|see you|farewell",
           "responses": [
             "Goodbye! See you later!",
-            "Bye! Have a great day!"
+            "Bye! Have a great day!",
+            "See you around!",
+            "Take care! Come back soon!",
+            "Farewell! Until next time!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "thank you|thanks|appreciate",
+          "responses": [
+            "You're welcome!",
+            "Happy to help!",
+            "No problem at all!",
+            "Anytime!",
+            "My pleasure!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "what can you do|what do you do|your functions",
+          "responses": [
+            "I respond based on pattern matching from my JSON rules!",
+            "Simple pattern-response matching across multiple languages!",
+            "I match your input against regex patterns and reply accordingly!",
+            "Rule-based conversation using JSON configuration!"
           ],
           "options": "IgnoreCase,Compiled"
         }
@@ -44,37 +74,105 @@
       "language": "japanese",
       "rules": [
         {
-          "pattern": "こんにちは|やあ|おはよう",
+          "pattern": "こんにちは|やあ|おはよう|こんばんは|もしもし",
           "responses": [
             "こんにちは！お手伝いできることはありますか？",
             "やあ！元気？",
-            "こんにちは！お元気ですか？"
+            "こんにちは！お元気ですか？",
+            "こんばんは！今夜は何を話しましょう？",
+            "はい、こちらはルールボットです！"
           ],
           "options": "Compiled"
         },
         {
-          "pattern": "元気|お元気|調子はどう",
+          "pattern": "元気|お元気|調子はどう|調子|大丈夫",
           "responses": [
             "元気です！シンプルなボットですが頑張ります！",
             "絶好調です、ありがとう！",
-            "調子いいですよ！あなたは？"
+            "調子いいですよ！あなたは？",
+            "バッチリです！何かお困りごとは？",
+            "問題ありません！お元気そうで何よりです！"
           ],
           "options": "Compiled"
         },
         {
-          "pattern": "名前|あなたは誰|自己紹介",
+          "pattern": "名前|あなたは誰|自己紹介|何者|誰",
           "responses": [
             "JSONで動くチャットボットです！",
             "ルールボットと呼んでください！",
-            "ルールベースのボットです。"
+            "ルールベースのボットです。",
+            "JSONルールボットでございます！",
+            "パターンマッチング専門のボットです！"
+          ],
+          "options": "Compiled"
+        }
+      ]
+    },
+    {
+      "language": "chinese",
+      "rules": [
+        {
+          "pattern": "你好|嗨|哈囉|早上好|下午好",
+          "responses": [
+            "你好！有什么可以帮助你的吗？",
+            "嗨！你好吗？",
+            "你好！很高兴见到你！",
+            "下午好！今天有什么想聊的？",
+            "你好！欢迎使用规则机器人！"
           ],
           "options": "Compiled"
         },
         {
-          "pattern": "またね|さようなら|バイバイ",
+          "pattern": "你好吗|最近怎么样|你还好吗|状态如何",
           "responses": [
-            "またね！",
-            "さようなら！良い一日を！"
+            "我很好！作为简单机器人我很棒！",
+            "状态绝佳，谢谢！",
+            "我很好！你怎么样？",
+            "一切正常！你呢？",
+            "运行顺畅！有什么新鲜事？"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "你叫什么|你是谁|你的名字|自我介绍",
+          "responses": [
+            "我是基于JSON的聊天机器人！",
+            "叫我规则机器人吧！",
+            "我是一个简单的基于规则的机器人。",
+            "JSON规则机器人为您服务！",
+            "我是您友好的规则机器人！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "再见|拜拜| goodbye|离开|下次见",
+          "responses": [
+            "再见！回头见！",
+            "拜拜！祝你有美好的一天！",
+            "下次见！",
+            "保重！欢迎随时回来！",
+            "再会！期待下次！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "谢谢|多谢|感谢|感激",
+          "responses": [
+            "不客气！",
+            "很高兴能帮到你！",
+            "没什么！",
+            "随时为您服务！",
+            "我的荣幸！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "你能做什么|你的功能|能帮什么|有什么用",
+          "responses": [
+            "我根据JSON规则进行模式匹配回复！",
+            "支持多语言的简单模式-回复匹配！",
+            "我将你的输入与正则表达式模式匹配相应回复！",
+            "基于JSON配置的规则对话！"
           ],
           "options": "Compiled"
         }
