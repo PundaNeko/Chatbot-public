@@ -91,3 +91,89 @@ C:\Users\Punda Neko\Documents\GitHub\Chatbot-App\Simple Chatbot Remake\bin\Debug
 C:\Users\Punda Neko\Documents\GitHub\Chatbot-App\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Punda Neko\Documents\GitHub\Chatbot-App\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\Punda Neko\Documents\GitHub\Chatbot-App\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Azure.Core.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Azure.Identity.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\NAudio.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\NAudio.Asio.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\NAudio.Core.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\NAudio.Midi.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\NAudio.Wasapi.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\NAudio.WinForms.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\NAudio.WinMM.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\System.ClientModel.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\System.Memory.Data.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\System.Speech.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Speech.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.csproj.AssemblyReference.cache
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple_Chatbot_Remake.Form1.resources
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.csproj.GenerateResource.cache
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.AssemblyInfoInputs.cache
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.AssemblyInfo.cs
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.csproj.CoreCompileInputs.cache
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.sourcelink.json
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\refint\Simple Chatbot Remake.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.pdb
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Simple Chatbot Remake.exe
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Simple Chatbot Remake.deps.json
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Simple Chatbot Remake.runtimeconfig.json
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Simple Chatbot Remake.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Simple Chatbot Remake.pdb
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple C.FE79B395.Up2Date
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\Simple Chatbot Remake.genruntimeconfig.cache
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\obj\Debug\net8.0-windows\ref\Simple Chatbot Remake.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Punda Neko\Documents\GitHub\Chatbot-public\Simple Chatbot Remake\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll

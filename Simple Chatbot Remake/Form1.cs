@@ -1,4 +1,3 @@
-using Microsoft.Data.SqlClient;
 using Microsoft.VisualBasic.ApplicationServices;
 using NAudio.CoreAudioApi;
 using NAudio.Wave;
@@ -15,17 +14,18 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 using static Simple_Chatbot_Remake.Form1;
 
 namespace Simple_Chatbot_Remake
 {
     public partial class Form1 : Form
     {
-        private string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=ChatBotDB;Trusted_Connection=True;";
+        private string connectionString = "Server=localhost;Database=ChatBotHistory;Uid=root;Pwd=OneTwoThree45;Port=3306;";
 
-        private string LLMModel = "openrouter/pony-alpha";
+        private string LLMModel = "upstage/solar-pro-3:free";
 
-        string apiKey = "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";
+        string apiKey = "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";
         private List<object> conversationHistory = new();
         private readonly HttpClient client = new();
         private List<ChatRule> chatRules = new List<ChatRule>();
@@ -59,12 +59,13 @@ namespace Simple_Chatbot_Remake
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ClearTable();
             richTextBox1.AppendText("Bot: Hi! Type something...\n");
 
         }
         private void InitializeRules()
         {
-            //DebugText.AppendText("Execution started\n");
+            DebugText.AppendText("Execution started\n");
             //try to open json file
             try
             {
@@ -151,15 +152,21 @@ namespace Simple_Chatbot_Remake
 
             try
             {
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
+                client.DefaultRequestHeaders.Add("HTTP-Referer", "http://localhost");
+                client.DefaultRequestHeaders.Add("X-Title", "ChatBot");
+
                 var json = JsonSerializer.Serialize(request);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
+                DebugText.AppendText("Waiting on AI" + "\n");
                 var response = await
                     client.PostAsync("https://openrouter.ai/api/v1/chat/completions", content);
                 response.EnsureSuccessStatusCode();
                 if (!response.IsSuccessStatusCode)
                 {
                     string errorBody = await response.Content.ReadAsStringAsync();
-                    //DebugText.AppendText($"API Error: {response.StatusCode} - {errorBody} \n");
+                    DebugText.AppendText($"API Error: {response.StatusCode} - {errorBody} \n");
                     return;
                 }
 
@@ -171,14 +178,14 @@ namespace Simple_Chatbot_Remake
                 string botRole = botChoices.GetProperty("role").GetString();
                 int tokenCount = result.GetProperty("usage").GetProperty("completion_tokens").GetInt32();
 
-                await InsertIntoSQL("ChattyBotty", botRole, botReply, LLMModel, tokenCount);
+                await InsertIntoSQL("LLM", botRole, botReply, LLMModel, tokenCount);
 
                 AddMessage($"Bot:\n {botReply}\n", Color.White);
                 conversationHistory.Add(new { role = botRole, content = botReply });
             }
             catch (Exception ex)
             {
-                //DebugText.AppendText("Error: " + ex.Message);
+                DebugText.AppendText("Error: " + ex.Message);
             }
         }
 
@@ -232,27 +239,48 @@ namespace Simple_Chatbot_Remake
 
         private async Task InsertIntoSQL(string userId, string role, string content, string modelUsed = "Human", int tokensUsed = 0)
         {
-            DateTime thisTime = DateTime.Now;
-            using var conn = new SqlConnection(connectionString);
-            await conn.OpenAsync();
+            try
+            {
+                DateTime thisTime = DateTime.Now;
+                using var conn = new MySqlConnection(connectionString);
+                await conn.OpenAsync();
 
-            string sql = @"INSERT INTO ChatHistory (UserID, Role, Content, ModelUsed, TokensUsed) 
-               VALUES (@userId, @role, @content, @modelUsed, @tokensUsed)";
+                DebugText.AppendText("MySQL Connected!\n");
+
+                string sql = @"INSERT INTO ChatHistory (Username, Role, Content, ModelUsed, TokensUsed) 
+                   VALUES (@userId, @role, @content, @modelUsed, @tokensUsed)";
 
 
-            using var cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@userId", userId);
-            cmd.Parameters.AddWithValue("@role", role);
-            cmd.Parameters.AddWithValue("@content", content);
-            cmd.Parameters.AddWithValue("@modelUsed", modelUsed);
-            cmd.Parameters.AddWithValue("@tokensUsed", tokensUsed);
-            await cmd.ExecuteNonQueryAsync();
-
+                using var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@userId", userId);
+                cmd.Parameters.AddWithValue("@role", role);
+                cmd.Parameters.AddWithValue("@content", content);
+                cmd.Parameters.AddWithValue("@modelUsed", modelUsed);
+                cmd.Parameters.AddWithValue("@tokensUsed", tokensUsed);
+                await cmd.ExecuteNonQueryAsync();
+                DebugText.AppendText($" Inserted: {userId}\n");
+            }
+            catch (Exception ex)
+            {
+                DebugText.AppendText($" DB ERROR: {ex.Message}\n");
+            }
         }
+        private async void ClearTable()
+        {
+            try
+            {
+                using var conn = new MySqlConnection(connectionString);
+                await conn.OpenAsync();
 
-        //TRY 0: add in a profile json add a snarky ass comment from the bot 
-        //TRY 3: add in a 2 way comminucation methods
-        //TRY 4: try to make every word have a vector value for personal use (probably seperate branch
-
+                string sql = @"TRUNCATE TABLE ChatHistory";
+                using var cmd = new MySqlCommand(sql, conn);
+                await cmd.ExecuteNonQueryAsync();
+                DebugText.AppendText("Table cleared!\n");
+            }
+            catch (Exception ex)
+            {
+                DebugText.AppendText($" DB ERROR: {ex.Message}\n");
+            }
+        }
     }
 }

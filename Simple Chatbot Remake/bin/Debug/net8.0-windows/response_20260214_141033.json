@@ -1,0 +1,19 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1771045829-1FgjNmrxEJHlhR3V3zvS","provider":"Upstage","model":"upstage/solar-pro-3:free","object":"chat.completion","created":1771045829,"choices":[{"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","index":0,"message":{"role":"assistant","content":"Hello! I’m Solar Pro 3, a large language model developed by Upstage. My knowledge is up to July 2025, and I’m ready to help you with a wide range of topics—whether you need information in Korean, English, or Japanese. How can I assist you today?","refusal":null,"reasoning":"The user says \"Hello\". The system is a prompt to say who I am: Solar Pro 3, large language model trained by Upstage AI, Korean startup, knowledge cutoff July 2025, current date Feb 14, 2026.\n\nWe should respond politely, acknowledging the user. The system prompt has constraints: I should be the persona. So respond as the model and possibly mention name, capabilities. Provide a friendly greeting. The user hasn't asked any question yet; we just greet.\n\nWe can also ask how we can assist.\n\nThus answer with greeting, maybe include a short intro. Also perhaps mention that I can answer in Korean, English, Japanese; given that user said \"Hello\". We can respond in English or maybe Korean. Since user is likely not specifying language, we can respond in English.\n\nWe may also give some meta info: \"I'm Solar Pro 3, trained by Upstage AI, etc.\" This matches system prompt.\n\nWe must not stray into system internal notes. The user wants just a greeting. That's fine.\n\nLet's produce a friendly greeting: \"Hello! How can I assist you today?\" Possibly also mention \"I can answer in Korean, English, Japanese.\"\n\nThus final answer.","reasoning_details":[{"format":"unknown","index":0,"type":"reasoning.text","text":"The user says \"Hello\". The system is a prompt to say who I am: Solar Pro 3, large language model trained by Upstage AI, Korean startup, knowledge cutoff July 2025, current date Feb 14, 2026.\n\nWe should respond politely, acknowledging the user. The system prompt has constraints: I should be the persona. So respond as the model and possibly mention name, capabilities. Provide a friendly greeting. The user hasn't asked any question yet; we just greet.\n\nWe can also ask how we can assist.\n\nThus answer with greeting, maybe include a short intro. Also perhaps mention that I can answer in Korean, English, Japanese; given that user said \"Hello\". We can respond in English or maybe Korean. Since user is likely not specifying language, we can respond in English.\n\nWe may also give some meta info: \"I'm Solar Pro 3, trained by Upstage AI, etc.\" This matches system prompt.\n\nWe must not stray into system internal notes. The user wants just a greeting. That's fine.\n\nLet's produce a friendly greeting: \"Hello! How can I assist you today?\" Possibly also mention \"I can answer in Korean, English, Japanese.\"\n\nThus final answer."}]}}],"system_fingerprint":null,"usage":{"prompt_tokens":66,"completion_tokens":326,"total_tokens":392,"cost":0,"is_byok":false,"prompt_tokens_details":{"cached_tokens":64,"audio_tokens":0},"cost_details":{"upstream_inference_cost":0,"upstream_inference_prompt_cost":0,"upstream_inference_completions_cost":0},"completion_tokens_details":{"reasoning_tokens":256,"audio_tokens":0}}}

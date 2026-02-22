@@ -28,6 +28,9 @@ const dbConfig = {
     database: process.env.DB_NAME
 }
 
+console.log('DB Config:', dbConfig);  // Should show root user
+
+
 const userSessions = new Map();
 
 async function getDb(){

@@ -31,6 +31,7 @@
             richTextBox1 = new RichTextBox();
             textBox1 = new TextBox();
             button1 = new Button();
+            DebugText = new RichTextBox();
             SuspendLayout();
             // 
             // richTextBox1
@@ -63,11 +64,20 @@
             button1.Click += button1_Click;
             button1.KeyDown += button1_KeyDown;
             // 
+            // DebugText
+            // 
+            DebugText.Location = new Point(981, 12);
+            DebugText.Name = "DebugText";
+            DebugText.Size = new Size(427, 238);
+            DebugText.TabIndex = 3;
+            DebugText.Text = "";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1009, 624);
+            ClientSize = new Size(1420, 624);
+            Controls.Add(DebugText);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(richTextBox1);
@@ -83,5 +93,6 @@
         private RichTextBox richTextBox1;
         private TextBox textBox1;
         private Button button1;
+        private RichTextBox DebugText;
     }
 }

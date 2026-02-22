@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="http://localhost:4000/socket.io/socket.io.js"></script>
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
 </head>
 <body>
     <input id="usernameInput" placeholder="Enter your name" style="width:300px">
@@ -13,7 +13,7 @@
 
 <script>
     
-const socket = io('http://localhost:4000');
+const socket = io('http://localhost:3000');
 socket.emit('join-session', {sessionId: 'room1', userId: 1});
 
 socket.on('load-messages', (msgs) => {
@@ -33,7 +33,7 @@ function joinChat() {
   const username = document.getElementById('usernameInput').value.trim();
   if (!username) return alert('Enter a name');
   
-  fetch('http://localhost:4000/enter-name', {
+  fetch('http://localhost:3000/enter-name', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username })
