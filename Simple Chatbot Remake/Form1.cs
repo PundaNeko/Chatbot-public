@@ -25,7 +25,7 @@ namespace Simple_Chatbot_Remake
 
         private string LLMModel = "upstage/solar-pro-3:free";
 
-        string apiKey = "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";
+        string apiKey = "Œ©‚¹‚ç‚ê‚È‚¢";
         private List<object> conversationHistory = new();
         private readonly HttpClient client = new();
         private List<ChatRule> chatRules = new List<ChatRule>();
