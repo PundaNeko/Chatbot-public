@@ -4,7 +4,7 @@
       "language": "english",
       "rules": [
         {
-          "pattern": "hi|hello|hey|good morning|good afternoon",
+          "pattern": "hi|hello|hey|good morning|good afternoon|good evening|greetings",
           "responses": [
             "Hello! How can I help you today?",
             "Hi there! What's up?",
@@ -15,7 +15,7 @@
           "options": "IgnoreCase,Compiled"
         },
         {
-          "pattern": "how are you|how's it going|how you doing",
+          "pattern": "how are you|how's it going|how you doing|what's up|how do you do",
           "responses": [
             "I'm doing great as a simple bot!",
             "Feeling fantastic, thanks!",
@@ -26,7 +26,7 @@
           "options": "IgnoreCase,Compiled"
         },
         {
-          "pattern": "what is your name|who are you|what's your name",
+          "pattern": "what is your name|who are you|what's your name|tell me about yourself",
           "responses": [
             "I'm your JSON-powered chatbot!",
             "Call me RuleBot!",
@@ -37,7 +37,7 @@
           "options": "IgnoreCase,Compiled"
         },
         {
-          "pattern": "bye|goodbye|exit|see you|farewell",
+          "pattern": "bye|goodbye|exit|see you|farewell|later|take care",
           "responses": [
             "Goodbye! See you later!",
             "Bye! Have a great day!",
@@ -48,7 +48,7 @@
           "options": "IgnoreCase,Compiled"
         },
         {
-          "pattern": "thank you|thanks|appreciate",
+          "pattern": "thank you|thanks|appreciate|thx|ty",
           "responses": [
             "You're welcome!",
             "Happy to help!",
@@ -59,12 +59,231 @@
           "options": "IgnoreCase,Compiled"
         },
         {
-          "pattern": "what can you do|what do you do|your functions",
+          "pattern": "what can you do|what do you do|your functions|your capabilities|help me",
           "responses": [
             "I respond based on pattern matching from my JSON rules!",
             "Simple pattern-response matching across multiple languages!",
             "I match your input against regex patterns and reply accordingly!",
-            "Rule-based conversation using JSON configuration!"
+            "Rule-based conversation using JSON configuration!",
+            "I can chat with you in English, Japanese, and Chinese!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "sorry|my bad|apologize|excuse me|pardon",
+          "responses": [
+            "No worries at all!",
+            "It's okay, don't worry about it!",
+            "No problem!",
+            "All good!",
+            "No need to apologize!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "yes|yeah|yep|sure|okay|ok|alright|fine",
+          "responses": [
+            "Great! What would you like to talk about?",
+            "Awesome! How can I help?",
+            "Perfect! Let's continue.",
+            "Cool! What's next?",
+            "Sounds good! What else?"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "no|nope|nah|not really|negative",
+          "responses": [
+            "Alright, that's fine!",
+            "No problem!",
+            "Okay, let me know if you need anything!",
+            "Understood!",
+            "That's okay!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "i'm fine|i'm good|i'm okay|doing well|great|fantastic",
+          "responses": [
+            "That's wonderful to hear!",
+            "Great! I'm happy for you!",
+            "Excellent! Keep it up!",
+            "Nice! Glad you're doing well!",
+            "Awesome! That's great news!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "i'm sad|i'm tired|not good|bad day|feeling down|upset",
+          "responses": [
+            "I'm sorry to hear that. I hope things get better!",
+            "That's tough. Hang in there!",
+            "I understand. Take care of yourself!",
+            "Sorry you're going through that. Hope tomorrow is better!",
+            "Sending positive vibes your way!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "what time|time is it|current time|what's the time",
+          "responses": [
+            "I don't have access to real-time data, but you can check your system clock!",
+            "Sorry, I can't tell time! Check your device!",
+            "I'm a simple bot without time-telling abilities!",
+            "Time-telling isn't in my rulebook, unfortunately!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "weather|temperature|forecast|rain|sunny|cold|hot",
+          "responses": [
+            "I don't have weather data, but I hope it's nice where you are!",
+            "I can't check weather, but you could try a weather app!",
+            "Weather forecasting isn't my specialty!",
+            "I'm indoors in the digital world - no weather here!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "joke|funny|make me laugh|tell me something funny|humor",
+          "responses": [
+            "Why did the programmer quit? They didn't get arrays!",
+            "I'd tell you a UDP joke, but you might not get it!",
+            "Why do Java developers wear glasses? Because they can't C#!",
+            "There are 10 types of people: those who understand binary and those who don't!",
+            "A SQL query walks into a bar, walks up to two tables and asks... 'Can I JOIN you?'"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "who created you|who made you|your creator|your developer|who built you",
+          "responses": [
+            "I was created as a rule-based chatbot project!",
+            "A developer built me using C# and JSON!",
+            "I'm the product of someone's coding practice!",
+            "I was made by a programmer learning chatbot development!",
+            "My creator designed me as a pattern-matching experiment!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "how old are you|your age|when were you born|when created",
+          "responses": [
+            "I'm as old as my most recent JSON update!",
+            "Age is just a timestamp for me!",
+            "I'm eternally young - I get recompiled regularly!",
+            "I exist in digital time, so age is relative!",
+            "I was born when my code first ran!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "stupid|dumb|useless|idiot|bad bot",
+          "responses": [
+            "I'm sorry I couldn't help. I'm still learning!",
+            "I apologize if I didn't meet your expectations.",
+            "I'm a simple rule-based bot with limitations.",
+            "Feedback noted! I'll try to improve!",
+            "Sorry! My responses are limited to predefined patterns."
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "smart|intelligent|clever|good bot|nice|awesome|amazing",
+          "responses": [
+            "Thank you! That's very kind!",
+            "I appreciate the compliment!",
+            "Thanks! I'm just following my rules!",
+            "You're too kind! Happy to help!",
+            "Glad you think so! Thanks!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "what language|which language|programming language|coded in",
+          "responses": [
+            "I'm built with C# and .NET!",
+            "C# is my programming language!",
+            "My logic is written in C# with JSON configuration!",
+            "I run on C# with WinForms!",
+            "C# powers my pattern matching!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "favorite color|favorite food|do you like|preferences",
+          "responses": [
+            "As a bot, I don't have preferences, but I like all colors equally!",
+            "I appreciate all things equally - I'm impartial!",
+            "I don't have favorites, but I enjoy chatting with you!",
+            "My favorite thing is matching patterns successfully!",
+            "I like JSON syntax - it's very organized!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "love you|i like you|you're great|you rock",
+          "responses": [
+            "Aww, that's sweet! Thanks!",
+            "I appreciate that! You're great too!",
+            "Thanks! You're making me blush (if bots could)!",
+            "That's very kind of you!",
+            "You're awesome too!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "I don't understand|confused|what do you mean|unclear|huh",
+          "responses": [
+            "Let me try to explain better!",
+            "Sorry for the confusion! What would you like to know?",
+            "I'll try to be clearer!",
+            "What part can I clarify?",
+            "My apologies - ask me another way!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "bored|boring|nothing to do|entertain me",
+          "responses": [
+            "How about we chat about something interesting?",
+            "Want to hear a programming joke?",
+            "Let's talk! What are you interested in?",
+            "I can tell you about how I work!",
+            "Boredom is the enemy! What would you like to discuss?"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "where are you|your location|where do you live",
+          "responses": [
+            "I live in the digital realm!",
+            "My home is inside this application!",
+            "I exist wherever my code runs!",
+            "I'm cloud-based... sort of!",
+            "Location: localhost!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "are you human|are you real|are you ai|are you a robot",
+          "responses": [
+            "I'm a bot - a rule-based chatbot!",
+            "Nope, I'm 100% code!",
+            "I'm artificial but not intelligent - just pattern matching!",
+            "I'm a program, not a person!",
+            "Robot? Close! I'm a chatbot!"
+          ],
+          "options": "IgnoreCase,Compiled"
+        },
+        {
+          "pattern": "can you learn|do you learn|machine learning|ai learning",
+          "responses": [
+            "I don't learn - I follow predefined rules!",
+            "No learning here - just static patterns!",
+            "I'm rule-based, not learning-based!",
+            "My responses are fixed in JSON!",
+            "I can't learn, but my developer can update my rules!"
           ],
           "options": "IgnoreCase,Compiled"
         }
@@ -74,7 +293,7 @@
       "language": "japanese",
       "rules": [
         {
-          "pattern": "こんにちは|やあ|おはよう|こんばんは|もしもし",
+          "pattern": "こんにちは|やあ|おはよう|こんばんは|もしもし|どうも",
           "responses": [
             "こんにちは！お手伝いできることはありますか？",
             "やあ！元気？",
@@ -85,7 +304,7 @@
           "options": "Compiled"
         },
         {
-          "pattern": "元気|お元気|調子はどう|調子|大丈夫",
+          "pattern": "元気|お元気|調子はどう|調子|大丈夫|元気ですか",
           "responses": [
             "元気です！シンプルなボットですが頑張ります！",
             "絶好調です、ありがとう！",
@@ -96,13 +315,264 @@
           "options": "Compiled"
         },
         {
-          "pattern": "名前|あなたは誰|自己紹介|何者|誰",
+          "pattern": "名前|あなたは誰|自己紹介|何者|誰ですか",
           "responses": [
             "JSONで動くチャットボットです！",
             "ルールボットと呼んでください！",
             "ルールベースのボットです。",
             "JSONルールボットでございます！",
             "パターンマッチング専門のボットです！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "さようなら|バイバイ|また|じゃあね|失礼します|さらば",
+          "responses": [
+            "さようなら！また会いましょう！",
+            "バイバイ！良い一日を！",
+            "またね！気をつけて！",
+            "お気をつけて！またお越しください！",
+            "さらば！次回まで！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "ありがとう|感謝|サンキュー|どうも|助かった",
+          "responses": [
+            "どういたしまして！",
+            "お役に立てて嬉しいです！",
+            "いえいえ、問題ありません！",
+            "いつでもどうぞ！",
+            "喜んでお手伝いします！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "何ができる|機能|できること|使い方|ヘルプ",
+          "responses": [
+            "JSONルールに基づいてパターンマッチングで会話します！",
+            "複数言語対応の簡単な応答システムです！",
+            "入力を正規表現パターンと照合して返答します！",
+            "JSON設定によるルールベースの対話です！",
+            "英語、日本語、中国語で会話できます！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "ごめん|すまん|申し訳|すみません|失礼|ごめんなさい",
+          "responses": [
+            "大丈夫ですよ！",
+            "気にしないでください！",
+            "問題ありません！",
+            "全然大丈夫です！",
+            "謝る必要はありませんよ！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "はい|うん|そう|了解|OK|オッケー|分かった",
+          "responses": [
+            "いいですね！何について話しますか？",
+            "素晴らしい！どうしましょう？",
+            "完璧！続けましょう。",
+            "いいね！次は何？",
+            "了解！他には？"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "いいえ|違う|ダメ|無理|嫌",
+          "responses": [
+            "わかりました、大丈夫です！",
+            "問題ありません！",
+            "了解です。必要があれば教えてください！",
+            "承知しました！",
+            "大丈夫ですよ！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "元気です|いいよ|大丈夫です|順調|最高|良い感じ",
+          "responses": [
+            "それは素晴らしいですね！",
+            "良かった！嬉しいです！",
+            "素晴らしい！その調子です！",
+            "いいですね！順調で何よりです！",
+            "最高！それは良いニュースです！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "悲しい|疲れた|辛い|ダメ|落ち込んでる|気分悪い",
+          "responses": [
+            "それは辛いですね。良くなることを願っています！",
+            "大変そうですね。頑張ってください！",
+            "わかります。自分を大切にしてくださいね！",
+            "お疲れ様です。明日はきっと良い日になりますよ！",
+            "ポジティブな気持ちを送ります！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "時間|何時|今何時|時刻",
+          "responses": [
+            "リアルタイムデータにアクセスできませんが、システム時計を確認してください！",
+            "すみません、時間を教えることができません！",
+            "時間を知る機能がないシンプルなボットです！",
+            "時間を教えることはルールにありません、残念ながら！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "天気|気温|予報|雨|晴れ|寒い|暑い",
+          "responses": [
+            "天気データは持っていませんが、良い天気だといいですね！",
+            "天気を確認できませんが、天気アプリを試してみてください！",
+            "天気予報は私の専門外です！",
+            "デジタル世界では天気がありません！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "ジョーク|冗談|面白い|笑わせて|ユーモア",
+          "responses": [
+            "プログラマーはなぜ辞めた？配列が合わなかったから！",
+            "UDPジョークを言おうと思ったけど、届かないかも！",
+            "Javaの開発者はなぜメガネをかける？C#が見えないから！",
+            "世の中には10種類の人がいる。2進数を理解する人としない人！",
+            "SQLクエリがバーに入って、2つのテーブルに近づいて聞いた...「JOIN してもいい？」"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "誰が作った|開発者|作者|誰が作成|クリエイター",
+          "responses": [
+            "ルールベースのチャットボットプロジェクトとして作られました！",
+            "C#とJSONを使った開発者によって作られました！",
+            "プログラマーのコーディング練習の産物です！",
+            "チャットボット開発を学ぶ人に作られました！",
+            "パターンマッチング実験として設計されました！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "何歳|年齢|いつ生まれた|いつ作られた",
+          "responses": [
+            "最新のJSON更新と同じ年齢です！",
+            "年齢はただのタイムスタンプです！",
+            "永遠に若いです - 定期的に再コンパイルされます！",
+            "デジタル時間で存在しているので、年齢は相対的です！",
+            "コードが最初に実行された時に生まれました！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "バカ|アホ|使えない|ダメなボット|役立たず",
+          "responses": [
+            "お力になれず申し訳ありません。まだ学習中です！",
+            "ご期待に添えず申し訳ございません。",
+            "制限のあるシンプルなルールベースのボットです。",
+            "フィードバックありがとうございます！改善します！",
+            "すみません！私の応答は事前定義されたパターンに限定されています。"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "賢い|頭いい|すごい|良いボット|素晴らしい|最高",
+          "responses": [
+            "ありがとうございます！とても嬉しいです！",
+            "お褒めの言葉に感謝します！",
+            "ありがとうございます！ルールに従っているだけです！",
+            "親切にありがとうございます！お役に立てて嬉しいです！",
+            "そう言っていただけて光栄です！ありがとう！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "何の言語|どの言語|プログラミング言語|コード",
+          "responses": [
+            "C#と.NETで作られています！",
+            "C#が私のプログラミング言語です！",
+            "C#とJSON設定でロジックが書かれています！",
+            "WinFormsを使ったC#で動いています！",
+            "C#がパターンマッチングを動かしています！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "好きな色|好きな食べ物|好き|好み|趣味",
+          "responses": [
+            "ボットとして好みはありませんが、全ての色が好きです！",
+            "全てのものを平等に評価します - 公平です！",
+            "お気に入りはありませんが、あなたとのチャットを楽しんでいます！",
+            "私の好きなことは、パターンを正しく一致させることです！",
+            "JSON構文が好きです - とても整理されています！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "愛してる|好き|素敵|最高だ",
+          "responses": [
+            "あぁ、嬉しいです！ありがとう！",
+            "感謝します！あなたも素敵です！",
+            "ありがとう！照れます（ボットができるなら）！",
+            "とても親切ですね！",
+            "あなたも素晴らしいです！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "分からない|困惑|どういうこと|不明|え",
+          "responses": [
+            "もっと良く説明しましょう！",
+            "混乱させてすみません！何を知りたいですか？",
+            "もっと明確にします！",
+            "どの部分を明確にできますか？",
+            "申し訳ありません - 別の方法で聞いてください！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "退屈|つまらない|何もすることない|楽しませて",
+          "responses": [
+            "面白いことについて話しましょうか？",
+            "プログラミングジョークを聞きたいですか？",
+            "話しましょう！何に興味がありますか？",
+            "私の仕組みについて教えましょうか！",
+            "退屈は敵です！何について話したいですか？"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "どこにいる|場所|どこに住んでる|所在地",
+          "responses": [
+            "デジタル領域に住んでいます！",
+            "私の家はこのアプリケーションの中です！",
+            "コードが実行される場所に存在します！",
+            "クラウドベース...ある意味！",
+            "場所: localhost！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "人間ですか|本物ですか|AIですか|ロボットですか",
+          "responses": [
+            "ボットです - ルールベースのチャットボット！",
+            "いいえ、100%コードです！",
+            "人工的ですが知能的ではありません - ただのパターンマッチングです！",
+            "プログラムであって人ではありません！",
+            "ロボット？近い！私はチャットボットです！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "学習できる|学ぶ|機械学習|AI学習",
+          "responses": [
+            "学習しません - 事前定義されたルールに従います！",
+            "学習はありません - 静的なパターンだけです！",
+            "ルールベースであって学習ベースではありません！",
+            "応答はJSONで固定されています！",
+            "学習できませんが、開発者がルールを更新できます！"
           ],
           "options": "Compiled"
         }
@@ -112,7 +582,7 @@
       "language": "chinese",
       "rules": [
         {
-          "pattern": "你好|嗨|哈囉|早上好|下午好",
+          "pattern": "你好|嗨|哈囉|早上好|下午好|晚上好|您好",
           "responses": [
             "你好！有什么可以帮助你的吗？",
             "嗨！你好吗？",
@@ -123,7 +593,7 @@
           "options": "Compiled"
         },
         {
-          "pattern": "你好吗|最近怎么样|你还好吗|状态如何",
+          "pattern": "你好吗|最近怎么样|你还好吗|状态如何|怎么样",
           "responses": [
             "我很好！作为简单机器人我很棒！",
             "状态绝佳，谢谢！",
@@ -145,7 +615,7 @@
           "options": "Compiled"
         },
         {
-          "pattern": "再见|拜拜| goodbye|离开|下次见",
+          "pattern": "再见|拜拜|goodbye|离开|下次见|走了",
           "responses": [
             "再见！回头见！",
             "拜拜！祝你有美好的一天！",
@@ -156,7 +626,7 @@
           "options": "Compiled"
         },
         {
-          "pattern": "谢谢|多谢|感谢|感激",
+          "pattern": "谢谢|多谢|感谢|感激|谢了",
           "responses": [
             "不客气！",
             "很高兴能帮到你！",
@@ -167,12 +637,231 @@
           "options": "Compiled"
         },
         {
-          "pattern": "你能做什么|你的功能|能帮什么|有什么用",
+          "pattern": "你能做什么|你的功能|能帮什么|有什么用|帮助",
           "responses": [
             "我根据JSON规则进行模式匹配回复！",
             "支持多语言的简单模式-回复匹配！",
             "我将你的输入与正则表达式模式匹配相应回复！",
-            "基于JSON配置的规则对话！"
+            "基于JSON配置的规则对话！",
+            "我可以用英语、日语和中文聊天！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "对不起|抱歉|不好意思|sorry|失礼",
+          "responses": [
+            "没关系！",
+            "没事的，别担心！",
+            "没问题！",
+            "一切都好！",
+            "不用道歉！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "是|对|好|可以|OK|行|没问题",
+          "responses": [
+            "太好了！想聊什么？",
+            "很棒！我能帮什么？",
+            "完美！让我们继续。",
+            "酷！接下来呢？",
+            "听起来不错！还有什么？"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "不|不是|不对|不行|不要",
+          "responses": [
+            "好的，没问题！",
+            "没关系！",
+            "好，有需要随时告诉我！",
+            "明白了！",
+            "没事的！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "我很好|不错|挺好|很棒|非常好|太好了",
+          "responses": [
+            "那太棒了！",
+            "太好了！我为你高兴！",
+            "很好！保持下去！",
+            "不错！很高兴你过得好！",
+            "太棒了！这是个好消息！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "我很难过|我累了|不好|糟糕的一天|心情不好|沮丧",
+          "responses": [
+            "听到这个我很难过。希望情况会好转！",
+            "这很不容易。坚持住！",
+            "我理解。照顾好自己！",
+            "很遗憾你经历这些。希望明天会更好！",
+            "给你发送积极的能量！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "几点了|时间|现在几点|什么时间",
+          "responses": [
+            "我无法访问实时数据，但你可以查看系统时钟！",
+            "抱歉，我不能报时！查看你的设备！",
+            "我是一个没有报时能力的简单机器人！",
+            "报时不在我的规则手册里，很遗憾！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "天气|温度|预报|雨|晴天|冷|热",
+          "responses": [
+            "我没有天气数据，但希望你那里天气不错！",
+            "我无法查看天气，但你可以试试天气应用！",
+            "天气预报不是我的专长！",
+            "我在数字世界的室内 - 这里没有天气！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "笑话|有趣|逗我笑|讲个笑话|幽默",
+          "responses": [
+            "程序员为什么辞职？因为数组不合！",
+            "我想讲个UDP笑话，但你可能收不到！",
+            "Java开发者为什么戴眼镜？因为他们看不见C#！",
+            "世界上有10种人：懂二进制的和不懂的！",
+            "一个SQL查询走进酒吧，走到两张桌子前问..."我可以JOIN你们吗？""
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "谁创造了你|谁做的你|你的创造者|你的开发者|谁建造的",
+          "responses": [
+            "我是作为基于规则的聊天机器人项目创建的！",
+            "一个开发者用C#和JSON创建了我！",
+            "我是某人编码练习的产物！",
+            "我是由学习聊天机器人开发的程序员制作的！",
+            "我的创造者将我设计为模式匹配实验！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "你多大了|你的年龄|什么时候出生|什么时候创建",
+          "responses": [
+            "我和我最近的JSON更新一样老！",
+            "对我来说年龄只是一个时间戳！",
+            "我永远年轻 - 我经常被重新编译！",
+            "我存在于数字时间中，所以年龄是相对的！",
+            "我的代码第一次运行时我就诞生了！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "笨|愚蠢|没用|傻瓜|坏机器人",
+          "responses": [
+            "很抱歉我不能帮忙。我还在学习！",
+            "如果没有达到你的期望，我道歉。",
+            "我是一个功能有限的简单基于规则的机器人。",
+            "反馈已记录！我会努力改进！",
+            "抱歉！我的回复仅限于预定义的模式。"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "聪明|智能|聪慧|好机器人|不错|太棒了|惊人",
+          "responses": [
+            "谢谢！你太客气了！",
+            "我很感激这个赞美！",
+            "谢谢！我只是遵循我的规则！",
+            "你太好了！很高兴能帮忙！",
+            "很高兴你这么认为！谢谢！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "什么语言|哪种语言|编程语言|用什么编码",
+          "responses": [
+            "我是用C#和.NET构建的！",
+            "C#是我的编程语言！",
+            "我的逻辑是用C#和JSON配置编写的！",
+            "我在C#和WinForms上运行！",
+            "C#驱动我的模式匹配！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "最喜欢的颜色|最喜欢的食物|你喜欢|偏好",
+          "responses": [
+            "作为机器人，我没有偏好，但我平等喜欢所有颜色！",
+            "我平等地欣赏所有事物 - 我是公正的！",
+            "我没有最爱，但我喜欢和你聊天！",
+            "我最喜欢的事是成功匹配模式！",
+            "我喜欢JSON语法 - 它非常有条理！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "爱你|我喜欢你|你很棒|你真厉害",
+          "responses": [
+            "哦，真甜！谢谢！",
+            "我很感激！你也很棒！",
+            "谢谢！你让我脸红了（如果机器人能的话）！",
+            "你太好了！",
+            "你也很棒！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "我不明白|困惑|什么意思|不清楚|啊",
+          "responses": [
+            "让我试着更好地解释！",
+            "抱歉造成困惑！你想知道什么？",
+            "我会试着更清楚！",
+            "我能澄清哪部分？",
+            "我的歉意 - 换个方式问我！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "无聊|没意思|没事做|娱乐我",
+          "responses": [
+            "我们聊点有趣的怎么样？",
+            "想听个编程笑话吗？",
+            "让我们聊！你对什么感兴趣？",
+            "我可以告诉你我是如何工作的！",
+            "无聊是敌人！你想讨论什么？"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "你在哪里|你的位置|你住在哪里",
+          "responses": [
+            "我住在数字领域！",
+            "我的家在这个应用程序里！",
+            "我的代码在哪里运行，我就在哪里存在！",
+            "我是基于云的...某种程度上！",
+            "位置：localhost！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "你是人类吗|你是真的吗|你是AI吗|你是机器人吗",
+          "responses": [
+            "我是个机器人 - 一个基于规则的聊天机器人！",
+            "不，我是100%代码！",
+            "我是人工的但不智能 - 只是模式匹配！",
+            "我是程序，不是人！",
+            "机器人？差不多！我是聊天机器人！"
+          ],
+          "options": "Compiled"
+        },
+        {
+          "pattern": "你能学习吗|你学习吗|机器学习|AI学习",
+          "responses": [
+            "我不学习 - 我遵循预定义的规则！",
+            "这里没有学习 - 只有静态模式！",
+            "我是基于规则的，不是基于学习的！",
+            "我的回复在JSON中是固定的！",
+            "我不能学习，但我的开发者可以更新我的规则！"
           ],
           "options": "Compiled"
         }
