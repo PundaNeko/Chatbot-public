@@ -211,12 +211,5 @@ namespace Simple_Chatbot_Remake
                 e.SuppressKeyPress = true;
             }
         }
-
-        //TRY 0: add in a profile json add a snarky ass comment from the bot 
-        //TRY 1: next, connect to a web based application (probably should make myself) sql server?
-        //TRY 2: branch it and add in a free AI API (not sure if this will work)
-        //TRY 3: add in a 2 way comminucation methods
-        //TRY 4: try to make every word have a vector value for personal use (probably seperate branch
-
     }
 }
